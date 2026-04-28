@@ -1710,6 +1710,41 @@
     .back-to-top { bottom: 1.2rem; right: 1.2rem; width: 42px; height: 42px; }
   }
 
+
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000
+}
+
+.floating-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgb(0 0 0 / .1);
+    transition: transform 0.2s
+}
+
+.call-btn {
+    background-color: #a30909
+}
+
+.whatsapp-btn {
+    background-color: #a30909
+}
+
+.floating-buttons a img {
+    width: 31px
+}
+
+
   @media (max-width: 480px) {
     .footer-main { grid-template-columns: 1fr; }
     .footer-brand { grid-column: span 1; }
@@ -1766,4 +1801,18 @@
 .footer-links {
     padding-left: 0px !important;
 }
+     .floating-buttons {
+        bottom: 12px;
+        left: 10px
+    }
+
+    .floating-buttons a {
+        width: 40px;
+        height: 40px
+    }
+
+    .floating-buttons a img {
+        width: 21px
+    }
+
 }
