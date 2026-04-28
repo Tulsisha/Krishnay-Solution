@@ -1712,38 +1712,65 @@
 
 
 
+/* Floating Container */
 .floating-buttons {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    display: flex;
-    flex-direction: column;
-    z-index: 1000
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* buttons ke beech space */
+  z-index: 9999;
 }
 
+/* Common Button Style */
 .floating-buttons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgb(0 0 0 / .1);
-    transition: transform 0.2s
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
 }
 
+/* Hover Effect */
+.floating-buttons a:hover {
+  transform: scale(1.1);
+}
+
+/* Call Button */
 .call-btn {
-    background-color: #a30909
+  background-color: #a30909; /* red */
 }
 
+/* WhatsApp Button */
 .whatsapp-btn {
-    background-color: #a30909
+  background-color: #25D366; /* official green */
 }
 
+/* Icons */
 .floating-buttons a img {
-    width: 31px
+  width: 28px;
 }
 
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-buttons {
+    bottom: 15px;
+    left: 12px;
+  }
+
+  .floating-buttons a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .floating-buttons a img {
+    width: 22px;
+  }
+}
 
   @media (max-width: 480px) {
     .footer-main { grid-template-columns: 1fr; }
@@ -1801,18 +1828,5 @@
 .footer-links {
     padding-left: 0px !important;
 }
-     .floating-buttons {
-        bottom: 12px;
-        left: 10px
-    }
-
-    .floating-buttons a {
-        width: 40px;
-        height: 40px
-    }
-
-    .floating-buttons a img {
-        width: 21px
-    }
 
 }
