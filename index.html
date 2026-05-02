@@ -71,6 +71,15 @@
 
 </head>
 <body>
+<!-- preloader -->
+<div id="preloader">
+    <div class="preloader-content">
+        <img src="/image/krishnay.png" alt="Krishnay Solution Logo" class="preloader-logo">
+        <div class="loader"></div>
+    </div>
+</div>
+
+
 
 <!-- Cursor -->
 <div class="cursor" id="cursor"></div>
@@ -1033,6 +1042,17 @@ function updateCharCount(textarea) {
   //     setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; }, 3000);
   //   }, 1500);
   // }
+</script>
+<!-- preloader script -->
+<script>
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        preloader.classList.add("hide");
+    }, 2500); // ✅ 2.5 seconds (best)
+});
+</script>
 </script>
 </body>
 </html>
